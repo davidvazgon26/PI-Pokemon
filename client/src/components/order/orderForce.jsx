@@ -10,9 +10,11 @@ export default function OrderForce(){
         dispatch(sortForce(event.target.value))
     }
 
-    return <select name="select" onChange={onSelectChange}>
+    return <label htmlFor="">Orden fuerza
+    <select name="select" onChange={onSelectChange}>
+        <option value=""></option>
         <option value="Menor a Mayor">Menor a Mayor</option>
         <option value="Mayor a Menor">Mayor a Menor</option>
-    </select>
+    </select> </label>
 
 }

@@ -10,9 +10,11 @@ export default function OrderABC(){
         dispatch(sort(event.target.value))
     }
 
-    return <select name="select" onChange={onSelectChange}>
+    return <label htmlFor="">Orden alfabético
+    <select name="select" onChange={onSelectChange}>
+        <option value=""></option>
         <option value="ascendente">ascendente</option>
         <option value="descendente">descendente</option>
-    </select>
+    </select></label>
 
 }

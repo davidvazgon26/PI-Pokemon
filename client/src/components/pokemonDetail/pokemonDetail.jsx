@@ -15,7 +15,7 @@ export default function Detail (){
             return()=>{
                 setPokemon(null)
             }
-    },[])
+    },[id])
 
     
 
@@ -30,6 +30,7 @@ export default function Detail (){
                         <div>
                             <img src={pokemon.img} alt='imagen pokemon'/>
                             <h3>{pokemon.name}</h3>
+                            <span>Id: {pokemon.id}</span>
                         </div>
                         <div>
                             <div>

@@ -3,6 +3,9 @@ import SearchBar from '../searchbar/searchbar.jsx'
 import OrderABC from '../order/orderABC.jsx'
 import OrderForce from '../order/orderForce.jsx'
 import NavBar from '../navbar/navBar.jsx'
+import Filtrar from '../filtrados/index.jsx'
+import FiltroAPINoAPi from '../filtrados/filtroApiNoApi.jsx'
+import Paginado from '../paginado/paginado.jsx'
 
 
 export default function Principal(){
@@ -11,7 +14,10 @@ export default function Principal(){
                 <SearchBar/>
                     <OrderABC/>
                         <OrderForce/>
-                            <Pokemons/>
+                            <Filtrar/>
+                                <FiltroAPINoAPi/>
+                                    <Paginado/>
+                                <Pokemons/>
     </div>
     )
 }
