@@ -121,10 +121,18 @@ routerP.get('/pokemons/:id',  (req,res,next)=>{
             res.send(api)
         })
     } else {
-        Pokemon.findAll({ include: Tipo })
+        Pokemon.findAll({ 
+           where:{
+               id:{
+                   [Op.eq]:id
+               }
+           },
+           include: Tipo
+            
+        })
         .then((response)=>{
             const [DB] = response
-            console.log(DB.dataValues)
+            // console.log(DB.dataValues)
             res.send(DB.dataValues)
         })
     }
