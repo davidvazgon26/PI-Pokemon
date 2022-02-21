@@ -9,8 +9,8 @@ export default function Paginado (){
     let dispatch = useDispatch()
 
     useEffect(()=>{
-        console.log(count)
-        console.log(max)
+        // console.log(count)
+        // console.log(max)
         dispatch(filterPag(count, max))
     })
 

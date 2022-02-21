@@ -6,7 +6,8 @@ export default function Pokemon ({name, img, id}){
         <Link to={`/pokemons/${id}`}>
             <span>Ir a Detalle</span>
         </Link>
-        <img src={img} alt='imagen pokemon'/>
+        <img  src={img} alt='imagen pokemon' />
         <h3>{name}</h3>
     </div>
+
 }

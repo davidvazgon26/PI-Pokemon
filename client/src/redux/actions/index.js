@@ -8,6 +8,7 @@ export const FILTER = 'FILTER'
 export const TRAER_TIPOS = 'TRAER_TIPOS'
 export const FILTER_API = 'FILTER_API'
 export const FILTER_PAG = 'FILTER_PAG'
+export const BUSCAR_POKEMON_ID = 'BUSCAR_POKEMON_ID'
 
 export function traerPokemons(){
     return function(dispatch) {
@@ -38,6 +39,19 @@ export function traerTipos(){
         })
     }
 }
+
+// export function buscarPokemonID(id){
+//     return function(dispatch) {
+//         axios.get('http://localhost:3001/pokemons/'+id)
+//         .then((response)=>{
+//             console.log(response)
+//             dispatch({
+//                 type: BUSCAR_POKEMON_ID,
+//                 payload: response.data
+//             })
+//         })
+//     }
+// }
 
 
 export function buscarPokemons(search){

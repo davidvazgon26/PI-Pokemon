@@ -8,7 +8,7 @@ export default function Filtrar (){
     let dispatch = useDispatch()
     useEffect(() =>{
         dispatch(traerTipos())
-    })
+    },[dispatch])
 
     // console.log(tipos)
     function filterChange(event){

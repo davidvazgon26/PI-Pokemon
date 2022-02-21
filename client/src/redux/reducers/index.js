@@ -92,7 +92,7 @@ export default function pokemonReducer(state = initialState, action){
                 let count = action.payload.count
                 let max = action.payload.max
                 const result = state.filtroPokemons.slice(count, max)
-                console.log(result)
+                // console.log(result)
                 return {
                     ...state,
                     pokemonsMostrar: result
