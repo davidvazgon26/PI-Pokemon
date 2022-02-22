@@ -24,7 +24,7 @@ function acomodarDatos (response){
             speed: response.data.stats[5].base_stat,
             height: response.data.height,
             weight: response.data.weight,
-            img: response.data.sprites.other.home.front_default,
+            img: response.data.sprites.other["official-artwork"].front_default,
             tipos: tipos
     };
 
@@ -79,7 +79,7 @@ routerP.get ('/pokemons', async(req,res,next)=>{
 
     } else {
         var arr =[]
-        let pokemonAPI = await axios.get('https://pokeapi.co/api/v2/pokemon/?limit=41')
+        let pokemonAPI = await axios.get('https://pokeapi.co/api/v2/pokemon/?limit=56')
         let objetos = pokemonAPI.data.results
         objetos.forEach((item) => {
             const response = unPokemon(item.url)
