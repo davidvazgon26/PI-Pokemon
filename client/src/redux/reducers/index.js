@@ -27,7 +27,7 @@ export default function pokemonReducer(state = initialState, action){
                 filtroPokemons: action.payload
             }
         case SORT:
-            let ordenarPokemons = [...state.pokemons]
+            let ordenarPokemons = [...state.filtroPokemons]
             
             ordenarPokemons = ordenarPokemons.sort((a,b)=>{
                 if(a.name < b.name){
@@ -43,7 +43,7 @@ export default function pokemonReducer(state = initialState, action){
                 filtroPokemons: ordenarPokemons
             }
         case SORT_FORCE:
-            let ordenarPorFuerza = [...state.pokemons]
+            let ordenarPorFuerza = [...state.filtroPokemons]
             
             ordenarPorFuerza = ordenarPorFuerza.sort((a,b)=>{
                 if(a.force < b.force){
