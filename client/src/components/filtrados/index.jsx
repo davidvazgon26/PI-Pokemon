@@ -21,17 +21,13 @@ export default function Filtrar (){
     return(
         <div>
             <label htmlFor="tipos">Filtro por Tipo</label>
-            <select name="tipos" onChange={filterChange} id='tipos'>
-                <option value=""></option>
+            <select className="filtroTipo" name="tipos" onChange={filterChange} id='tipos'>
+                <option value="Todos">Todos</option>
                 { tipos.map((tipo)=>{
                     return (<option key={tipo.id} id={tipo.id} value={tipo.name}>{tipo.name}</option>)
                 })
-
                 }
             </select>
-                    
-                        
-                  
                 
         </div>
     )

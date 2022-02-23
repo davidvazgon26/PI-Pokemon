@@ -6,6 +6,7 @@ import NavBar from '../navbar/navBar.jsx'
 import Filtrar from '../filtrados/index.jsx'
 import FiltroAPINoAPi from '../filtrados/filtroApiNoApi.jsx'
 import Paginado from '../paginado/paginado.jsx'
+import Reset from '../reset/reset.jsx'
 
 
 export default function Principal(){
@@ -16,6 +17,7 @@ export default function Principal(){
                         <OrderForce/>
                             <Filtrar/>
                                 <FiltroAPINoAPi/>
+                                    <Reset/>
                                     <Paginado/>
                                 <Pokemons/>
     </div>

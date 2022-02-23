@@ -9,6 +9,7 @@ export const TRAER_TIPOS = 'TRAER_TIPOS'
 export const FILTER_API = 'FILTER_API'
 export const FILTER_PAG = 'FILTER_PAG'
 export const BUSCAR_POKEMON_ID = 'BUSCAR_POKEMON_ID'
+export const RESET = 'RESET'
 
 export function traerPokemons(){
     return function(dispatch) {
@@ -108,5 +109,12 @@ export function filterPag (count, max){
             count,
             max
         }
+    }
+}
+
+export function hacerReset (payload){
+    return {
+        type:RESET,
+        payload:payload
     }
 }

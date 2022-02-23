@@ -14,8 +14,8 @@ function filterApiDB(event){
 
     return <div>
                 <label htmlFor="desde">Filtro Desde
-                    <select name="desde" id="desde" onChange={filterApiDB}>
-                        <option value=""></option>
+                    <select className="filtroApiNoApi" name="desde" id="desde" onChange={filterApiDB}>
+                        <option value="Todos">Todos</option>
                         <option value="Desde la API">Desde la API</option>
                         <option value="Desde la BD">Desde la BD</option>
                     </select></label>

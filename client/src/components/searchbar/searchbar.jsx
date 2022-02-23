@@ -5,10 +5,10 @@ import { buscarPokemons } from '../../redux/actions/index.js'
 export default function SearchBar(){
     const [search, setSearch] = useState('')
     let dispatch = useDispatch()
+
     function onSubmit(event){
         event.preventDefault()
         dispatch(buscarPokemons(search))
-        
         
     }
 
@@ -19,7 +19,7 @@ export default function SearchBar(){
 
     return<div> 
         <form onSubmit={onSubmit}>
-            <input type="text" onChange={onInputChange} value={search}/>
+            <input className="inputSearch" type="text" onChange={onInputChange} value={search}/>
             <input type="submit" value="Buscar" />
         </form>
     </div>
