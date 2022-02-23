@@ -9,11 +9,11 @@ const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}
   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
 });
 
-sequelize.authenticate()  // confirmar si se pudo autenticar a la BD
-.then(() =>{
-console.log('conexion correcta')
-})
-.catch(err => console.log(err));
+// sequelize.authenticate()  // confirmar si se pudo autenticar a la BD
+// .then(() =>{
+// console.log('conexion correcta')
+// })
+// .catch(err => console.log(err));
 
 const basename = path.basename(__filename);
 

@@ -74,7 +74,7 @@ routerP.get ('/pokemons', async(req,res,next)=>{
             pokeAPI? API = acomodarDatos(pokeAPI) : API = []
             // console.log(API)
             let allPokemons = [DB,API]
-            res.send(allPokemons)
+            res.status(200).send(allPokemons)
         })
 
     } else {
@@ -98,7 +98,7 @@ routerP.get ('/pokemons', async(req,res,next)=>{
         Promise.all(arr).then(response=>{
             // console.log(response)
             let allPokemons = pokemonDBArray.concat(response)
-            res.send(allPokemons)
+            res.status(200).send(allPokemons)
         })
     }
 
