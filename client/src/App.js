@@ -1,4 +1,3 @@
-import './App.css';
 import { Routes, Route } from "react-router-dom";
 
 //Componentes 
@@ -9,9 +8,12 @@ import About from './components/about/about.jsx'
 import Detail from './components/pokemonDetail/pokemonDetail.jsx'
 import AddPokemon from './components/formulario/addPokemon.jsx'
 
+import './App.css';
+
+//div className="App"
 function App() {
   return (
-    <div className="App">
+    <>
 
       <Routes>
             <Route index  element={<Home/>}/>
@@ -22,7 +24,7 @@ function App() {
             <Route path="*" element={<NoMatch />} />
       </Routes>
       
-    </div>
+    </>
   );
 }
 

@@ -1,0 +1,85 @@
+.card {
+    background-color: #F0373A ;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    border-radius: 50%;
+    text-align: center;
+    height:20em;
+    width: 320px;
+    margin-left: 15px;
+    display: align;
+    margin-bottom: 60px;
+
+}
+
+.contenedor {
+    height: 160px;
+    width: 314px; 
+    border: 5px solid #363638; 
+    background: white;
+    -moz-border-radius: 0 0 160px 160px ;
+    -webkit-border-radius: 0 0 160px 160px;
+    border-radius: 0 0 160px 160px;
+    padding: 0;
+    box-shadow: 10px 12px 8px 0 rgb(221, 219, 50, 0.48) , 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.circuloR{
+    height: 160px;
+    width: 314px; 
+    border: 5px solid #363638; 
+    -moz-border-radius: 160px 160px 0 0 ;
+    -webkit-border-radius: 160px 160px 0 0;
+    border-radius: 160px 160px 0 0;
+    padding: 0;
+}
+
+.circulo{
+    width: 20px;
+    height:20px;
+    border-radius:50%;
+    font-size:50px;
+    color: white;
+    border: 5px solid #363638;
+    position: relative;
+    left: 146px;
+    bottom: 18px;
+    background-color: white;
+}
+
+.tiposContainer{
+    display:flex;
+    justify-content: space-around;
+    margin-bottom: 14px;
+}
+
+.tipos{
+    font-family: bold;
+    font-size:14px;
+    background-color: #363638;
+    width: 60px;
+    border-radius: 18px;
+    color: white;
+}
+
+.imagen {
+    width: 150px;
+    margin-top: 10px;
+    border-radius:50%
+}
+
+.nombre{
+    color: #363638;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.link{
+    text-decoration: none;
+    pointer-events:all;
+    font-size: .9 rem;
+    color:#045B8F 
+}
+
+
+

@@ -1,0 +1,115 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.body{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    /* background: #E4ECFA; */
+    background-image:  url("../../assets/images/Fondo-web3.jpg");
+    background-position: center center;
+    /* background-repeat: no-repeat; */
+    background-attachment: fixed;
+    background-size: cover;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+
+}
+
+
+
+.bodyT{
+    /* Ubicación de la imagen */
+    background-image:  url("../../assets/images/Fondo-web3.jpg"); 
+    
+    /* Para dejar la imagen de fondo centrada, vertical y horizontalmente */
+    background-position: center center;
+    
+    /* Para que la imagen de fondo no se repita */
+    background-repeat: no-repeat;
+    
+    /* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
+    background-attachment: fixed;
+    
+    /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+    background-size: cover;
+    
+    /* Se muestra un color de fondo mientras se está cargando la imagen de fondo o si hay problemas para cargarla */
+    background-color: #363838;
+    }
+
+    /* .home_body__qBMuQ {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        background-image: url(/static/media/Fondo-web3.5e11124c.jpg);
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+        flex-wrap: wrap;
+        align-content: stretch;
+        justify-content: center;
+    } */
+
+/* .body{
+    background-image:linear-gradient(to top, rgba(10, 10, 10, 0), rgb(206, 52, 25)),  url("../../assets/images/Fondo-web3.jpg"); 
+    }
+*/
+
+.imagenFondo{
+    border-radius: 40%;
+}
+
+/* .btn{
+    background-color: rgb(172, 40, 40);
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 14px;
+    pointer-events:all;
+    position: absolute;
+    left: 45%;
+    top: 80%;
+} 
+
+.btn:hover{
+    background-color: rgb(53, 51, 51)
+} */
+
+
+.btn {background-image: linear-gradient(to right, #a82525 20%, #353333  51%, #a82525  100%)}
+.btn {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-decoration: none;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+   position: absolute;
+   left: 45%;
+   top: 80%;
+   pointer-events:all;
+ }
+
+ .btn:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+
+
+@media only screen and (max-width: 767px) {
+
+   
+}
+
+/* <p style="color: black; font-family: Verdana;">Un párrafo de texto.</p> */
