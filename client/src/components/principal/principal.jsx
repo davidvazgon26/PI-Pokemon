@@ -8,17 +8,25 @@ import FiltroAPINoAPi from '../filtrados/filtroApiNoApi.jsx'
 import Paginado from '../paginado/paginado.jsx'
 import Reset from '../reset/reset.jsx'
 
+import s from './principal.module.css'
 
 export default function Principal(){
     return (<div>
             <NavBar/>
-                <SearchBar/>
-                    <OrderABC/>
+            <details >
+                <summary>Desplegar filtros</summary>
+                    <div className={s.details}>
+                        <OrderABC/>
                         <OrderForce/>
-                            <Filtrar/>
-                                <FiltroAPINoAPi/>
-                                    <Reset/>
-                                    <Paginado/>
+                        <Filtrar/>
+                        <FiltroAPINoAPi/>
+                        <SearchBar/>
+                        <Reset/>
+                    </div>
+            </details>
+                    <div className={s.btnes}>
+                         <Paginado/>
+                    </div>
                                 <Pokemons/>
     </div>
     )

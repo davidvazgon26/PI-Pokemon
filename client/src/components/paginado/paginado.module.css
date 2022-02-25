@@ -1,0 +1,19 @@
+.contenedorBtn{
+    display: flex;
+}
+
+.btn{
+    pointer-events:all;
+    width: 110px;
+    height: 25px;
+    margin: 5px 20px;
+    background-color: #5c5c5e;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.btn:hover{
+
+    background-color: #045B8F;
+}
+

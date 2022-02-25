@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux'
 import {sort} from '../../redux/actions/index.js'
 
+import s from './ordenABC.module.css'
 
 export default function OrderABC(){
     const dispatch = useDispatch()

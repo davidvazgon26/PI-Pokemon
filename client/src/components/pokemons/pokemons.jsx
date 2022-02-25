@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import {traerPokemons} from '../../redux/actions/index.js'
 
 import Pokemon from '../pokemon/pokemon.jsx'
-import styles from './pokemons.module.css'
+import s from './pokemons.module.css'
 
 export default function Pokemons(){
     let pokemons = useSelector((state)=> state.pokemonsMostrar)
@@ -12,7 +12,8 @@ export default function Pokemons(){
         dispatch(traerPokemons())
     },[dispatch])
     // console.log(pokemons)  
-    return <div>
+    return <div className={s.contenedorCards}>
+    
                 {pokemons.map((pokemon)=>{
                     let tipo1, tipo2
                     if(pokemon.tipos.length > 1){
@@ -23,7 +24,7 @@ export default function Pokemons(){
                         tipo2 = ""
                     }else{tipo1 = ""; tipo2 = ""}
                     
-                    return <Pokemon className={styles.card} key={pokemon.id} id={pokemon.id} name={pokemon.name} img={pokemon.img}
+                    return <Pokemon className={s.card} key={pokemon.id} id={pokemon.id} name={pokemon.name} img={pokemon.img}
                         tipo1 = {tipo1} tipo2 = {tipo2}
                     />
 

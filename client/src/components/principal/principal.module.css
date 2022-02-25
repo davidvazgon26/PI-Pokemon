@@ -1,0 +1,13 @@
+.btnes{
+    background-color: #363638;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px
+}
+
+.details{
+    display: flex;
+    background-color: #045B8F;
+    color: #fff;
+    justify-content: center;
+}

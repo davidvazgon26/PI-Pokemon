@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux'
 import {sortForce} from '../../redux/actions/index.js'
 
+import s from './ordenForce.module.css'
 
 export default function OrderForce(){
     const dispatch = useDispatch()
@@ -11,11 +12,13 @@ export default function OrderForce(){
         dispatch(sortForce(event.target.value))
     }
 
-    return <label htmlFor="">Orden fuerza
-    <select className="orderForce" name="select" onChange={onSelectChange}>
-        <option value="Ninguno">Ninguno</option>
-        <option value="Menor a Mayor">Menor a Mayor</option>
-        <option value="Mayor a Menor">Mayor a Menor</option>
-    </select> </label>
+    return <div className={s.ordenForce}>
+        <label className={s.label} htmlFor="">Orden fuerza </label>
+        <select className="orderForce" name="select" onChange={onSelectChange}>
+            <option value="Ninguno">Ninguno</option>
+            <option value="Menor a Mayor">Menor a Mayor</option>
+            <option value="Mayor a Menor">Mayor a Menor</option>
+        </select>
+    </div> 
 
 }

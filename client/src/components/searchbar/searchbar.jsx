@@ -2,6 +2,8 @@ import {useState} from 'react'
 import { useDispatch } from 'react-redux'
 import { buscarPokemons } from '../../redux/actions/index.js'
 
+import s from './searchbar.module.css'
+
 export default function SearchBar(){
     const [search, setSearch] = useState('')
     let dispatch = useDispatch()
@@ -17,8 +19,8 @@ export default function SearchBar(){
         setSearch(event.target.value)
     }
 
-    return<div> 
-        <form onSubmit={onSubmit}>
+    return<div className={s.div}> 
+        <form className={s.search} onSubmit={onSubmit}>
             <input className="inputSearch" type="text" onChange={onInputChange} value={search}/>
             <input type="submit" value="Buscar" />
         </form>

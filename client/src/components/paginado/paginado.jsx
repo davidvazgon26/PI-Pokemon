@@ -2,6 +2,8 @@ import {useSelector, useDispatch} from 'react-redux'
 import React, {useState, useEffect} from 'react'
 import {filterPag} from '../../redux/actions/index.js'
 
+import s from './paginado.module.css'
+
 export default function Paginado (){
     let allPokemonFiltrados = useSelector((state)=> state.filtroPokemons)
     const [count, setCount] = useState(0)
@@ -41,10 +43,10 @@ export default function Paginado (){
     // }
     // console.log(pag())
     // console.log(allPokemonFiltrados)
-    return <div>
-        <button onClick={pagAnt}>Anterior</button>
+    return <div className={s.contenedorBtn}>
+        <button className={s.btn} onClick={pagAnt}>Pag. Anterior</button>
             <ul>
             </ul>
-        <button onClick={pagSig}>Siguiente</button>
+        <button className={s.btn} onClick={pagSig}>Pag. Siguiente</button>
     </div>
 }

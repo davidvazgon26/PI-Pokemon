@@ -1,0 +1,19 @@
+
+.search{
+    margin: 25px;
+    text-align: center;
+    display: flex;
+    
+}
+
+.label{
+    display:flex;
+}
+
+.inputSearch{
+    width:120px
+}
+
+.btn{
+    width:60px;
+}

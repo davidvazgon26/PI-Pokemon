@@ -21,7 +21,7 @@
     -webkit-border-radius: 0 0 160px 160px;
     border-radius: 0 0 160px 160px;
     padding: 0;
-    box-shadow: 10px 12px 8px 0 rgb(221, 219, 50, 0.48) , 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 10px 12px 8px 0 #363638 , 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .circuloR{
@@ -65,7 +65,12 @@
 .imagen {
     width: 150px;
     margin-top: 10px;
-    border-radius:50%
+    border-radius:50%;
+    
+}
+
+.card:hover{
+    transform:scale(1.1);
 }
 
 .nombre{

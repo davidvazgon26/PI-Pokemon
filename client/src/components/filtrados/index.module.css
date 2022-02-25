@@ -1,0 +1,12 @@
+.index{
+    margin: 8px 16px;
+    text-align: center;
+}
+
+.label{
+    display:flex;
+}
+
+.select{
+    width: 120px
+}
