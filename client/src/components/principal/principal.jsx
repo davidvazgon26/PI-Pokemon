@@ -14,7 +14,7 @@ export default function Principal(){
     return (<div>
             <NavBar/>
             <details >
-                <summary>Desplegar filtros</summary>
+                <summary className={s.det}>Desplegar filtros</summary>
                     <div className={s.details}>
                         <OrderABC/>
                         <OrderForce/>

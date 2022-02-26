@@ -1,0 +1,166 @@
+
+
+.divExterno{
+    background-color: rgb(54, 54, 56, .25);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding:0;
+}
+
+
+.contenedor{
+    width: 550px;
+    background: rgb(54,54,56);
+    background: linear-gradient(342deg, #fff 20%, #045B8F  50%, #fff 80%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:  auto;
+    border-radius: 32px;
+}
+
+.img{
+
+    width:220px;
+    position: relative;
+    top: -22px
+}
+
+img:hover{
+    transform:scale(1.1);
+}
+
+.name{
+    color:#045B8F;
+    font-size: 30px;
+    background-color: #363638;
+    width: 550px;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+}
+
+.id{
+    background-color:#363638;
+    width: 120px;
+    color:white;
+    padding: 5px;
+    position: relative;
+    left: 420px;
+    top:12px
+}
+
+.nivel{
+    display: flex;
+    justify-content: center;
+    margin: 12px;
+}
+
+.contenedor p{
+    width: 140px;
+    text-align: right;
+    padding: 0 15px
+}
+
+output{
+    padding:0 0 0 4px
+}
+
+.tipos{
+        /* display: flex; */
+        align-items: center;
+        text-align: -webkit-center;
+        margin-bottom: 35px;
+}
+
+.tipo{
+    margin: 35px;
+    padding: 6px 35px;
+    font-size: 18px;
+    border: 2px solid #363638;
+    border-radius: 14px;
+    margin-bottom: 35px;
+}
+
+.divFooterCard{
+    background-color: #363638;
+    margin-top: 5px;
+    font-size:30px;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    color: #363638
+}
+
+.divcontent{
+    margin-top:15px;
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+
+
+.contenedorregresar{
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    /* position: relative;
+    bottom: 320px;
+    left: 40px; */
+    border: 2px solid #363638;
+    border-radius: 15px;
+    width: 95px;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    color:#363638;
+}
+
+.contenedorregresar:hover{
+    transform:scale(1.1);
+}
+
+.regresar{
+    width:20px;
+}
+
+
+/* .slideContainer{
+    width: 75%;
+    margin-top: 200px;
+}
+
+.slider{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(90deg, rgb(117,252,117) 60%), rgb(214,214,214) 60%;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+    border-radius: 12px;
+    box-shadow: 0px 1px 10px 1px black;
+}
+
+.slider:hover{
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius:50%;
+    cursor: pointer;
+} */
+
+/*
+<div className={s.slideContainer}>
+                                    <input className={s.slider} type="range" value={pokemon.weight}/>
+                                </div>
+*/

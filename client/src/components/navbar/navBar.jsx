@@ -12,18 +12,18 @@ export default function NavBar() {
           <p className={s.parrafo}>Bienvenido al catálogos de Pokemones</p>
         <nav className={s.navegacion}>
           <ul>
-            <ol>
+            <li>
               <Link className={s.link} to="/">Home</Link>
-            </ol>
-            <ol>
+            </li>
+            <li>
               <Link className={s.link} to="/pokemons">pokemons</Link>
-            </ol>
-            <ol>
+            </li>
+            <li>
               <Link className={s.link} to="/agregar">Add Pokemones</Link>
-            </ol>
-            <ol>
+            </li>
+            <li>
               <Link className={s.link} to="/about">About</Link>
-            </ol>
+            </li>
           </ul>
         </nav>
       </div>

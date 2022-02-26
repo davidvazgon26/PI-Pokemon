@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 
+import images from '../../assets/images/CualEs.png'
 import s from './pokemon.module.css'
 
 export default function Pokemon ({name, img, id, tipo1, tipo2}){
@@ -7,7 +8,7 @@ export default function Pokemon ({name, img, id, tipo1, tipo2}){
     return <div className={s.card} key={id} id={id}>
         <div className={s.circuloR}>
        
-            <img  className={s.imagen} src={img} alt='imagen pokemon' />
+            <img  className={s.imagen} src={img.includes('https')?img:images} alt='imagen pokemon' />
             
         </div>
         <div className={s.contenedor}>

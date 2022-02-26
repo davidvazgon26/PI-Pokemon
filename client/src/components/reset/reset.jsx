@@ -1,6 +1,8 @@
 import { useDispatch } from "react-redux"
 import {hacerReset} from '../../redux/actions/index.js'
 
+import s from './reset.module.css'
+
 export default function Reset(){
 
     let dispatch = useDispatch()
@@ -16,6 +18,6 @@ export default function Reset(){
         }
 
     return <div>
-        <button onClick={reset}>Reset</button> 
+        <button className={s.btn} onClick={reset}>Reset</button> 
     </div>
 }

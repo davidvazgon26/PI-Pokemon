@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     background: rgb(54,54,56);
-background: linear-gradient(342deg, rgba(54,54,56,1) 20%, rgba(168,37,37,1) 50%, rgba(54,54,56,1) 80%);
+    background: linear-gradient(342deg, rgba(54,54,56,1) 20%, rgba(168,37,37,1) 50%, rgba(54,54,56,1) 80%);
 }
 
 .navegacion{
@@ -15,11 +15,11 @@ background: linear-gradient(342deg, rgba(54,54,56,1) 20%, rgba(168,37,37,1) 50%,
     text-decoration: none;
     padding: 20px
 }
-.navegacion ul lo{
+.navegacion ul li{
     background-image: linear-gradient(to right, #a82525 20%, #353333  51%, #a82525  100%)  
 }
-.navegacion ul lo{
-    margin: 5px 20px;
+.navegacion ul li{
+    margin: 5px 18px;
     width:160px;
     padding: 12px 0;
     text-align: center;
@@ -34,7 +34,7 @@ background: linear-gradient(342deg, rgba(54,54,56,1) 20%, rgba(168,37,37,1) 50%,
     pointer-events:all;
 }
 
-.navegacion ul lo:hover{
+.navegacion ul li:hover{
     background-position: right center; /* change the direction of the change here */
     color: #fff;
     text-decoration: none;

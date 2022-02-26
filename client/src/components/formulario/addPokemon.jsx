@@ -6,6 +6,8 @@ import {traerTipos} from '../../redux/actions/index.js'
 import { useNavigate } from "react-router-dom";
 import NavBar from '../navbar/navBar.jsx'
 
+import s from './addPokemon.module.css'
+
 
 export default function AddPokemon (){
     const [errorInput, setErrorInput] = useState(true);
@@ -113,37 +115,55 @@ export default function AddPokemon (){
 
     }
 
-    return(<div>
-            <NavBar/>
-            <form onSubmit={onSubmit}>
-                <label htmlFor="">Nombre del Pokemon:</label>
-                <input name="name" type="text" placeholder="Pokemon Name" onChange={onInputChange} value={pokemon.name}/> {/* // value={pokemon.name} donde pokemon es el state */}
+    return(<div className={s.divexterno}>
+        <NavBar/>
+        <div className={s.divform}>
+        <form className={s.form} onSubmit={onSubmit}>
+                <div>
+                <label className={s.label} htmlFor="name">Nombre:</label>
+                <input name="name" type="text" placeholder="Pokemon Name" onChange={onInputChange} value={pokemon.name}/>
+                {/* // value={pokemon.name} donde pokemon es el state */}
                 {/* {console.log(error)} */}
                 {!errorInput? null : <h4>{errorInput}</h4>}
-
-                <label htmlFor="">Vida:</label>
+                </div>
+                
+                <div>
+                <label className={s.label} htmlFor="life">Vida:</label>
                 <input name="life" type="number" placeholder="Rango de 0 a 100" onChange={onInputChange} value={pokemon.life} required/>
-
-                <label htmlFor="">Velocidad:</label>
+                </div>
+                
+                <div>
+                <label htmlFor="speed">Velocidad:</label>
                 <input name="speed" type="number" placeholder="Rango de 0 a 100" onChange={onInputChange} value={pokemon.speed} required/>
-
-                <label htmlFor="">Ataque:</label>
+                </div>
+                
+               <div>
+               <label htmlFor="force">Ataque:</label>
                 <input name="force" type="number" placeholder="Rango de 0 a 100" onChange={onInputChange} value={pokemon.force} required/>
-
-                <label htmlFor="">Defensa:</label>
+               </div>
+                
+                <div>
+                <label htmlFor="defending">Defensa:</label>
                 <input name="defending" type="number" placeholder="Rango de 0 a 100" onChange={onInputChange} value={pokemon.defending} required/>
-
-                <label htmlFor="">Altura:</label>
+                </div>
+                
+               <div>
+               <label htmlFor="height">Altura:</label>
                 <input name="height" type="number" placeholder="Rango de 0 a 100" onChange={onInputChange} value={pokemon.height} required/>
-
+               </div>
+                
+                <div>
                 <label htmlFor="">Peso:</label>
                 <input name="weight" type="number" placeholder="Rango de 0 a 100" onChange={onInputChange} value={pokemon.weight} required/>
-
                 {!errorInputN? null : <h4>{errorInputN}</h4>}
-                              
-                <label htmlFor="">Url de la imagen del Pokemon:</label>
-                <input name="img" type="text" placeholder="Ingresa Url de la imagen" onChange={onInputChange} value={pokemon.img}/>
-
+                </div>
+                
+                <div>
+                <label htmlFor="">Url imagen:</label>
+                <input name="img" type="url" placeholder="Ingresa Url de la imagen" onChange={onInputChange} value={pokemon.img}/>
+                </div>
+                
+                <br />
                 <h5>Tipo de Pokemon:</h5>
                 {!error? null : <h4>{error}</h4>}
                 <div>
@@ -161,6 +181,7 @@ export default function AddPokemon (){
 
                 <input type="submit" value="Registrar" disabled={errorInput? true : false} />
             </form>
+        </div>
         
     </div>
 

@@ -14,7 +14,7 @@ export default function OrderForce(){
 
     return <div className={s.ordenForce}>
         <label className={s.label} htmlFor="">Orden fuerza </label>
-        <select className="orderForce" name="select" onChange={onSelectChange}>
+        <select className="orderForce" id={s.select} name="select" onChange={onSelectChange}>
             <option value="Ninguno">Ninguno</option>
             <option value="Menor a Mayor">Menor a Mayor</option>
             <option value="Mayor a Menor">Mayor a Menor</option>

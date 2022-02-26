@@ -1,0 +1,35 @@
+.divexterno{
+    background-color: rgb(54, 54, 56, .25);
+}
+
+.divform{
+    display: flex;
+    justify-content: center
+}
+
+.form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px;
+    /* border: 2px solid #363638; */
+    border-radius: 20px;
+    padding: 8px 60px;
+    width: 600px;
+    /* height: auto; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    box-shadow: 0 0 20px #363638;
+}
+
+.label{
+
+}
+
+input{
+    width:200px
+}
+
+label{
+    font-weight: bold;
+
+}

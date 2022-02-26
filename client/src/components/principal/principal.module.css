@@ -11,3 +11,11 @@
     color: #fff;
     justify-content: center;
 }
+
+.det{
+    text-align: center;
+    background-color: #fff;
+    margin-bottom:5px;
+    margin-top:5px;
+    font-size: 18px;
+}

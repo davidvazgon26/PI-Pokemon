@@ -21,7 +21,7 @@ export default function SearchBar(){
 
     return<div className={s.div}> 
         <form className={s.search} onSubmit={onSubmit}>
-            <input className="inputSearch" type="text" onChange={onInputChange} value={search}/>
+            <input className="inputSearch" id={s.inputSearch} type="text" onChange={onInputChange} value={search}/>
             <input type="submit" value="Buscar" />
         </form>
     </div>
