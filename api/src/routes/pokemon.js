@@ -31,13 +31,13 @@ function acomodarDatos (response){
     return obj
 }
 
-var pokemonsArray = []
+// var pokemonsArray = []
 
 async function unPokemon(url = "https://pokeapi.co/api/v2/pokemon/4/"){
     let response = await axios.get(url)
     let link = acomodarDatos(response)
     // console.log(link)
-    pokemonsArray.push(link);
+    // pokemonsArray.push(link);
     return link
 }
 
@@ -49,7 +49,7 @@ routerP.get ('/pokemons', async(req,res,next)=>{
     const {name} = req.query
     var pokemonDBArray = []
 
-    if (name) {
+    if (name) {  //Para traer por nombre
         console.log('Llego un nombre: '+ name)
 
         const pokemonAPI = axios.get('https://pokeapi.co/api/v2/pokemon/'+name).catch((err)=>{})
@@ -77,9 +77,9 @@ routerP.get ('/pokemons', async(req,res,next)=>{
             res.status(200).send(allPokemons)
         })
 
-    } else {
+    } else {  // Para traerlos todos
         var arr =[]
-        let pokemonAPI = await axios.get('https://pokeapi.co/api/v2/pokemon/?limit=56')
+        let pokemonAPI = await axios.get('https://pokeapi.co/api/v2/pokemon/?limit=46')
         let objetos = pokemonAPI.data.results
         objetos.forEach((item) => {
             const response = unPokemon(item.url)
