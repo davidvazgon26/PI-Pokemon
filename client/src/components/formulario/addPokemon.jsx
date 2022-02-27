@@ -8,7 +8,6 @@ import NavBar from '../navbar/navBar.jsx'
 
 import s from './addPokemon.module.css'
 
-
 export default function AddPokemon (){
     const [errorInput, setErrorInput] = useState(true);
     const [errorInputN, setErrorInputN] = useState(true);
@@ -117,13 +116,19 @@ export default function AddPokemon (){
     }
 
     return(<div className={s.divexterno}>
-        <NavBar/>
+        {/* <NavBar/> */}
+
+                <div className={` ${s.btndiv}`}>
+                     <input className={s.btn} type="submit" value="Regresar" onClick={()=>navigate('/pokemons') } />
+                </div>
+                <h2 className={s.h2}>Formulario para agregar nuevos Pokemones</h2>
+
         <div className={s.divform}>
         <form className={s.form} onSubmit={onSubmit}>
                 <div className={s.formdiv}>
                 <div>
                 <label  htmlFor="name">Nombre:</label>
-                <input name="name" type="text" placeholder="Pokemon Name" onChange={onInputChange} value={pokemon.name}/>
+                <input id={s.inputazul} name="name" type="text" placeholder="Pokemon Name" onChange={onInputChange} value={pokemon.name}/>
                 {/* // value={pokemon.name} donde pokemon es el state */}
                 {/* {console.log(error)} */}
                 {!errorInput? null : <h4 className={s.errorname}>{errorInput}</h4>}
@@ -131,37 +136,37 @@ export default function AddPokemon (){
                 
                 <div>
                 <label  htmlFor="life">Vida:</label>
-                <input name="life" type="number" placeholder="Rango de 0 a 100" onChange={onInputChange} value={pokemon.life} required/>
+                <input id={s.inputazul} name="life" type="number" placeholder="Rango de 0 a 100" onChange={onInputChange} value={pokemon.life} required/>
                 </div>
                 
                 <div>
                 <label  htmlFor="speed">Velocidad:</label>
-                <input name="speed" type="number" placeholder="Rango de 0 a 100" onChange={onInputChange} value={pokemon.speed} required/>
+                <input id={s.inputazul} name="speed" type="number" placeholder="Rango de 0 a 100" onChange={onInputChange} value={pokemon.speed} required/>
                 </div>
                 
                <div>
                <label  htmlFor="force">Ataque:</label>
-                <input name="force" type="number" placeholder="Rango de 0 a 100" onChange={onInputChange} value={pokemon.force} required/>
+                <input id={s.inputazul} name="force" type="number" placeholder="Rango de 0 a 100" onChange={onInputChange} value={pokemon.force} required/>
                </div>
                 
                 <div>
                 <label htmlFor="defending">Defensa:</label>
-                <input name="defending" type="number" placeholder="Rango de 0 a 100" onChange={onInputChange} value={pokemon.defending} required/>
+                <input id={s.inputazul} name="defending" type="number" placeholder="Rango de 0 a 100" onChange={onInputChange} value={pokemon.defending} required/>
                 </div>
                 
                <div>
                <label htmlFor="height">Altura:</label>
-                <input name="height" type="number" placeholder="Rango de 0 a 100" onChange={onInputChange} value={pokemon.height} required/>
+                <input id={s.inputazul} name="height" type="number" placeholder="Rango de 0 a 100" onChange={onInputChange} value={pokemon.height} required/>
                </div>
                 
                 <div>
                 <label htmlFor="">Peso:</label>
-                <input name="weight" type="number" placeholder="Rango de 0 a 100" onChange={onInputChange} value={pokemon.weight} required/>
+                <input id={s.inputazul} name="weight" type="number" placeholder="Rango de 0 a 100" onChange={onInputChange} value={pokemon.weight} required/>
                 </div>
                 
                 <div>
                 <label htmlFor="">Url imagen:</label>
-                <input name="img" type="url" placeholder="Ingresa Url de la imagen" onChange={onInputChange} value={pokemon.img}/>
+                <input id={s.inputazul} name="img" type="url" placeholder="Ingresa Url de la imagen" onChange={onInputChange} value={pokemon.img}/>
                 </div>
 
                 </div>
