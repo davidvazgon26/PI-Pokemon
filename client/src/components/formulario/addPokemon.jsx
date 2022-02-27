@@ -52,7 +52,7 @@ export default function AddPokemon (){
             // console.log(event.target.value)
             // console.log(!/^\d{1,3}$/.test(event.target.value))
             if(!/^\d{1,3}$/.test(event.target.value)){
-                setErrorInputN('Ingresa un numero entero entre 1 y 999')
+                setErrorInputN('En los campos de rango solo permite numeros enteros entre 1 y 999')
             }else{
                 setErrorInputN('')
             }        
@@ -100,6 +100,7 @@ export default function AddPokemon (){
         axios.post('http://localhost:3001/pokemon', pokemon)
         .then(function (response) {
             arr.forEach(item =>{
+                console.log(item)
                 axios.post(`http://localhost:3001/${response.data.id}/tipo/${item}`)
                 .then((response)=>{console.log(response.data)})
             })
@@ -119,26 +120,27 @@ export default function AddPokemon (){
         <NavBar/>
         <div className={s.divform}>
         <form className={s.form} onSubmit={onSubmit}>
+                <div className={s.formdiv}>
                 <div>
-                <label className={s.label} htmlFor="name">Nombre:</label>
+                <label  htmlFor="name">Nombre:</label>
                 <input name="name" type="text" placeholder="Pokemon Name" onChange={onInputChange} value={pokemon.name}/>
                 {/* // value={pokemon.name} donde pokemon es el state */}
                 {/* {console.log(error)} */}
-                {!errorInput? null : <h4>{errorInput}</h4>}
+                {!errorInput? null : <h4 className={s.errorname}>{errorInput}</h4>}
                 </div>
                 
                 <div>
-                <label className={s.label} htmlFor="life">Vida:</label>
+                <label  htmlFor="life">Vida:</label>
                 <input name="life" type="number" placeholder="Rango de 0 a 100" onChange={onInputChange} value={pokemon.life} required/>
                 </div>
                 
                 <div>
-                <label htmlFor="speed">Velocidad:</label>
+                <label  htmlFor="speed">Velocidad:</label>
                 <input name="speed" type="number" placeholder="Rango de 0 a 100" onChange={onInputChange} value={pokemon.speed} required/>
                 </div>
                 
                <div>
-               <label htmlFor="force">Ataque:</label>
+               <label  htmlFor="force">Ataque:</label>
                 <input name="force" type="number" placeholder="Rango de 0 a 100" onChange={onInputChange} value={pokemon.force} required/>
                </div>
                 
@@ -155,23 +157,25 @@ export default function AddPokemon (){
                 <div>
                 <label htmlFor="">Peso:</label>
                 <input name="weight" type="number" placeholder="Rango de 0 a 100" onChange={onInputChange} value={pokemon.weight} required/>
-                {!errorInputN? null : <h4>{errorInputN}</h4>}
                 </div>
                 
                 <div>
                 <label htmlFor="">Url imagen:</label>
                 <input name="img" type="url" placeholder="Ingresa Url de la imagen" onChange={onInputChange} value={pokemon.img}/>
                 </div>
+
+                </div>
                 
+                {!errorInputN? null : <h4 className={s.errorname}>{errorInputN}</h4>}
                 <br />
-                <h5>Tipo de Pokemon:</h5>
-                {!error? null : <h4>{error}</h4>}
-                <div>
+                <h5 className={s.subtitle}>Tipos de Pokemones:</h5>
+                {!error? null : <h4 className={s.errorname}>{error}</h4>}
+                <div className={s.check}>
                 { tipos.map((tipo)=>{
                     return (
-                        <div key={tipo.id}>
+                        <div key={tipo.id} className={s.contenedorcheck}>
                         <input type="checkbox" className="checks" name={tipo.name} id={tipo.id} value={tipo.name}/>
-                        <label htmlFor={tipo.name}> {tipo.name}</label>
+                        <label htmlFor={tipo.name} className={s.labelcheck}> {tipo.name}</label>
                         </div>
                     )
                 })
@@ -179,7 +183,9 @@ export default function AddPokemon (){
                 }
                 </div>
 
-                <input type="submit" value="Registrar" disabled={errorInput? true : false} />
+                <div className={s.btndiv}>
+                     <input className={s.btn} type="submit" value="Registrar" disabled={errorInput? true : false} />
+                </div>
             </form>
         </div>
         
