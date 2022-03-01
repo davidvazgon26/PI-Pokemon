@@ -58,11 +58,10 @@ export default function Paginado (){
            {/* { console.log(Math.ceil(allPokemonFiltrados.length/paginado))} */}
             <ul className={s.ulli}>
                 {lista.map(item=>{
-                    return <a className={s.aaa}>
-                    <li key={item} className={s.link} onClick={()=>{   setCount((item*paginado)-paginado)
+                    return <li key={item} className={s.link} onClick={()=>{   setCount((item*paginado)-paginado)
                         setMax(item*paginado)
                     }} >{item}</li>
-                    </a>
+                    
                 })}
             </ul>
         <button className={s.btn} onClick={pagSig}>Pag. Siguiente</button>
