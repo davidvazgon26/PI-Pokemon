@@ -7,7 +7,7 @@ import s from './pokemons.module.css'
 
 export default function Pokemons(){
     let pokemons = useSelector((state)=> state.pokemonsMostrar)
-    let filtro = useSelector((state)=> state.filtroPokemons)
+    // let filtro = useSelector((state)=> state.filtroPokemons)
     let dispatch = useDispatch()
     useEffect(()=>{
         dispatch(traerPokemons())

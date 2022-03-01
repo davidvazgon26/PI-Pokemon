@@ -3,11 +3,11 @@ import React, {useState, useEffect} from 'react'
 import {filterPag} from '../../redux/actions/index.js'
 
 import s from './paginado.module.css'
-
+var paginado = 12
 export default function Paginado (){
     let allPokemonFiltrados = useSelector((state)=> state.filtroPokemons)
     const [count, setCount] = useState(0)
-    const [max, setMax] = useState(12)
+    const [max, setMax] = useState(paginado)
     let dispatch = useDispatch()
 
     useEffect(()=>{
@@ -17,15 +17,16 @@ export default function Paginado (){
     })
 
     function pagAnt(){
-        setMax(max<=12?max:max-12)
-        setCount(count<=0?count:count-12)
+        setMax(max<=12?max:max-paginado)
+        setCount(count<=0?count:count-paginado)
     }
     function pagSig(){
         var total = allPokemonFiltrados.length
-        setMax(max>=total?max:max+12)
-        setCount(count>=total-12?count:count+12)
+        setMax(max>=total?max:max+paginado)
+        setCount(count>=total-paginado?count:count+paginado)
     }
 
+/*
     // console.log(allPokemonFiltrados)
     
     // function paginaSiguiente (){
@@ -41,12 +42,28 @@ export default function Paginado (){
     //     cont = cont + 12
     //     return result
     // }
+    */
     // console.log(pag())
     // console.log(allPokemonFiltrados)
+
+    const tot = Math.ceil(allPokemonFiltrados.length/paginado)
+
+    const lista = []
+    for(let i = 1; i < tot+1; i++) {
+        lista.push([i])
+    }
+
     return <div className={s.contenedorBtn}>
         <button className={s.btn} onClick={pagAnt}>Pag. Anterior</button>
-            <ul>
-                
+           {/* { console.log(Math.ceil(allPokemonFiltrados.length/paginado))} */}
+            <ul className={s.ulli}>
+                {lista.map(item=>{
+                    return <a className={s.aaa}>
+                    <li key={item} className={s.link} onClick={()=>{   setCount((item*paginado)-paginado)
+                        setMax(item*paginado)
+                    }} >{item}</li>
+                    </a>
+                })}
             </ul>
         <button className={s.btn} onClick={pagSig}>Pag. Siguiente</button>
     </div>
