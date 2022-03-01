@@ -2,6 +2,8 @@ import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import {traerPokemons} from '../../redux/actions/index.js'
 
+//Componentes
+import Loading from '../loading/loading.jsx'
 import Pokemon from '../pokemon/pokemon.jsx'
 import s from './pokemons.module.css'
 
@@ -14,8 +16,10 @@ export default function Pokemons(){
     },[dispatch])
     // console.log(pokemons)  
     return <div className={s.contenedorCards}>
-    
-                {pokemons.map((pokemon)=>{
+{/* {console.log(pokemons.length)} */}
+               { pokemons.length>0? 
+               
+                pokemons.map((pokemon)=>{
                     let tipo1, tipo2
                     if(pokemon.tipos.length > 1){
                         tipo1 = pokemon.tipos[0].name
@@ -29,6 +33,14 @@ export default function Pokemons(){
                         tipo1 = {tipo1} tipo2 = {tipo2}
                     />
 
-                })}
+                })
+               : 
+               <div className={s.loading} >
+
+               <Loading />
+               </div>
+               
+               }
+        
             </div>
 }
