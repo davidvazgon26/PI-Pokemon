@@ -102,6 +102,14 @@ label {
     margin-top: 12px;
 }
 
+.btn2{
+    padding: 4px 24px;
+    border-radius: 14px;
+    background-color: rgba(96, 96, 99, 0.3);
+    color: rgb(255, 255, 255, 0.3);
+    margin-top: 12px;
+}
+
 .contenedorcheck {
     display: flex;
     align-items: center;

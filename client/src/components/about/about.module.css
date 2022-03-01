@@ -1,0 +1,37 @@
+.externo{
+    background: rgb(221,219,50);
+    background: radial-gradient(circle, rgba(221,219,50,1) 4%, rgba(221,73,50,0.8603816526610644) 51%, rgba(36,48,60,1) 100%);
+    width: 100%;
+    height:100%;
+    position: absolute;
+    
+}
+
+.titulo{
+    text-align: center;
+    color: #fff;
+    background-color: rgb(54, 54, 56, 0.9);
+    width:880px;
+    margin: 12px auto;
+    border-radius: 8px
+}
+
+.parrafo{
+    text-align: center;
+    color: #fff;
+    background-color: rgb(54, 54, 56, 0.5);
+    width:880px;
+    margin: auto;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.parrafo a{
+    text-decoration: none;
+    pointer-events:all;
+    color: #000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 16px;
+}
+

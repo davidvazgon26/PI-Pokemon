@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import {traerTipos} from '../../redux/actions/index.js'
 import { useNavigate } from "react-router-dom";
-import NavBar from '../navbar/navBar.jsx'
+// import NavBar from '../navbar/navBar.jsx'
 
 import s from './addPokemon.module.css'
 
@@ -77,11 +77,8 @@ export default function AddPokemon (){
     //         [event.target.name]: event.target.value
     //     })
     //     }
-    
 
-    function onSubmit(event){
-        event.preventDefault()
-        // console.log( event)
+    function onCheckChange(){
         let checks = document.querySelectorAll('.checks')
         let arr = []
         checks.forEach((item)=>{
@@ -92,10 +89,22 @@ export default function AddPokemon (){
         })  
             if(arr.length>2){
                 setError('El pokemon solo acepta hasta 2 variantes o tipos');
-                return
+                return 
             }else{
                 setError('')
+                return arr
             }
+    }
+    
+
+    function onSubmit(event){
+        event.preventDefault()
+        // console.log( event)
+        let checks = document.querySelectorAll('.checks')
+        let arr = []
+        checks.forEach((item)=>{
+                arr.push(item.id)
+        }) 
         axios.post('http://localhost:3001/pokemon', pokemon)
         .then(function (response) {
             arr.forEach(item =>{
@@ -179,8 +188,8 @@ export default function AddPokemon (){
                 { tipos.map((tipo)=>{
                     return (
                         <div key={tipo.id} className={s.contenedorcheck}>
-                        <input type="checkbox" className="checks" name={tipo.name} id={tipo.id} value={tipo.name}/>
-                        <label htmlFor={tipo.name} className={s.labelcheck}> {tipo.name}</label>
+                        <input type="checkbox" className="checks" name={tipo.name} id={tipo.id} value={tipo.name} onChange={onCheckChange}/>
+                        <label htmlFor={tipo.name} className={s.labelcheck} > {tipo.name}</label>
                         </div>
                     )
                 })
@@ -189,7 +198,7 @@ export default function AddPokemon (){
                 </div>
 
                 <div className={s.btndiv}>
-                     <input className={s.btn} type="submit" value="Registrar" disabled={errorInput? true : false} />
+                     <input className={errorInput?s.btn2:s.btn} type="submit" value="Registrar" disabled={errorInput?true:false} />
                 </div>
             </form>
         </div>

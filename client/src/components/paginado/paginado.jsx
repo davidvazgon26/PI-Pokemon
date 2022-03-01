@@ -46,6 +46,7 @@ export default function Paginado (){
     return <div className={s.contenedorBtn}>
         <button className={s.btn} onClick={pagAnt}>Pag. Anterior</button>
             <ul>
+                
             </ul>
         <button className={s.btn} onClick={pagSig}>Pag. Siguiente</button>
     </div>
