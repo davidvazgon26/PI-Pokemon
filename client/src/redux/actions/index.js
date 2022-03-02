@@ -13,7 +13,7 @@ export const RESET = 'RESET'
 
 export function traerPokemons(){
     return function(dispatch) {
-        axios.get('http://localhost:3001/pokemons')
+        axios.get('/pokemons')
         .then((pokemons)=>{
             dispatch({
                 type: TRAER_POKEMONS,
@@ -28,7 +28,7 @@ export function traerPokemons(){
 
 export function traerTipos(){
     return function(dispatch) {
-        axios.get('http://localhost:3001/tipo')
+        axios.get('/tipo')
         .then((tipos)=>{
             dispatch({
                 type: TRAER_TIPOS,
@@ -43,7 +43,7 @@ export function traerTipos(){
 
 // export function buscarPokemonID(id){
 //     return function(dispatch) {
-//         axios.get('http://localhost:3001/pokemons/'+id)
+//         axios.get('/pokemons/'+id)
 //         .then((response)=>{
 //             console.log(response)
 //             dispatch({
@@ -57,7 +57,7 @@ export function traerTipos(){
 
 export function buscarPokemons(search){
     return function(dispatch) {
-        axios.get('http://localhost:3001/pokemons?name='+search)
+        axios.get('/pokemons?name='+search)
         .then((pokemons)=>{
             dispatch({
                 type: BUSCAR_POKEMONS,
