@@ -22,7 +22,7 @@ export default function About(){
             <section>
             <p className={s.parrafo}>
                
-                También se utilizaron algunas otras herramientas para la organización del proyecto como<a href="https://miro.com/app/board/uXjVON6ng6Q=/" target="_blank" rel="noopener noreferrer">Miro</a> para los mapas mentales y de seguimiento a tareas pendientes, integración de imágenes, contenido y documentación así como <a href="https://www.figma.com/file/g6Qi0UX7nmYFgWgrESuAap/App-Pokemon?node-id=0%3A1" target="_blank" rel="noopener noreferrer">Figma</a> para algunos maquetados y definición de colores a utilizar.
+                También se utilizaron algunas otras herramientas para la organización del proyecto como <a href="https://miro.com/app/board/uXjVON6ng6Q=/" target="_blank" rel="noopener noreferrer">Miro</a> para los mapas mentales y de seguimiento a tareas pendientes, integración de imágenes, contenido y documentación así como <a href="https://www.figma.com/file/g6Qi0UX7nmYFgWgrESuAap/App-Pokemon?node-id=0%3A1" target="_blank" rel="noopener noreferrer">Figma</a> para algunos maquetados y definición de colores a utilizar.
             </p>
             </section>
             <br/>

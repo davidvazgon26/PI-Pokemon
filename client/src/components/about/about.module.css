@@ -19,7 +19,7 @@
 .parrafo{
     text-align: center;
     color: #fff;
-    background-color: rgb(54, 54, 56, 0.5);
+    background-color: rgb(54, 54, 56, 0.6);
     width:880px;
     margin: auto;
     border-radius: 8px;
@@ -30,7 +30,7 @@
 .parrafo a{
     text-decoration: none;
     pointer-events:all;
-    color: #000;
+    color: #363638;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 16px;
 }
