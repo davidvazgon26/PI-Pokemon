@@ -21,7 +21,7 @@ export default function Detail (){
     const [pokemon, setPokemon] = useState(null)
     let {id} = useParams()
     useEffect(() =>{
-            axios.get('http://localhost:3001/pokemons/'+id)
+            axios.get('/pokemons/'+id) //http://localhost:3001
             .then((response)=>{
                 setPokemon(response.data)
             })
