@@ -105,17 +105,17 @@ export default function AddPokemon (){
         checks.forEach((item)=>{
                 arr.push(item.id)
         }) 
-        axios.post('http://localhost:3001/pokemon', pokemon)
+        axios.post('/pokemon', pokemon) //http://localhost:3001
         .then(function (response) {
             arr.forEach(item =>{
                 console.log(item)
-                axios.post(`http://localhost:3001/${response.data.id}/tipo/${item}`)
+                axios.post(`/${response.data.id}/tipo/${item}`) //http://localhost:3001
                 .then((response)=>{console.log(response.data)})
             })
             navigate('/pokemons') 
           })
           .catch(function (error) {
-            console.error(error);
+            console.log(error);
           });
         // .then((response)=>{
         //     console.log(response)
