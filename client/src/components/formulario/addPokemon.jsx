@@ -87,11 +87,12 @@ export default function AddPokemon (){
                 arr.push(item.id)
             }
         })  
-            if(arr.length>2){
-                setError('El pokemon solo acepta hasta 2 variantes o tipos');
-                return 
-            }else{
-                setError('')
+        if(arr.length>2){
+            setError('El pokemon solo acepta hasta 2 variantes o tipos');
+            return 
+        }else{
+            setError('')
+            console.log(arr)
                 return arr
             }
     }
@@ -100,11 +101,14 @@ export default function AddPokemon (){
     function onSubmit(event){
         event.preventDefault()
         // console.log( event)
-        let checks = document.querySelectorAll('.checks')
-        let arr = []
-        checks.forEach((item)=>{
-                arr.push(item.id)
-        }) 
+        // let checks = document.querySelectorAll('.checks')
+        // let arr = []
+        // checks.forEach((item)=>{
+        //         arr.push(item.id)
+        // }) 
+        let arr = onCheckChange()
+        console.log('desde onSubmit')
+        console.log(arr)
         axios.post('/pokemon', pokemon) //http://localhost:3001
         .then(function (response) {
             arr.forEach(item =>{
@@ -122,7 +126,7 @@ export default function AddPokemon (){
         //     navigate('/pokemons')
         // })
 
-    }
+    } 
 
     return(<div className={s.divexterno}>
         {/* <NavBar/> */}

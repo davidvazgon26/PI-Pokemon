@@ -22,7 +22,7 @@ export default function pokemonReducer(state = initialState, action){
                 ...state,
                 tipos: action.payload
             }
-        case BUSCAR_POKEMONS:
+        case BUSCAR_POKEMONS: // por tipo
             // console.log(action.payload)
             let arr 
             if(action.payload[0].id !==undefined && action.payload[1].id !== undefined) {

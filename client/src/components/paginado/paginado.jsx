@@ -45,7 +45,7 @@ export default function Paginado (){
     */
     // console.log(pag())
     // console.log(allPokemonFiltrados)
-
+ 
     const tot = Math.ceil(allPokemonFiltrados.length/paginado)
 
     const lista = []
