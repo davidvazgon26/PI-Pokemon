@@ -206,4 +206,64 @@ routerP.delete('/', (req,res,next)=>{
 })
 
 
+{/********** Con Promesas ***********/
+ // routerP.get("/pokemonshome", (req, res, next) => {
+//   //debe devolver Imagen, nombre, tipo,
+//   console.log("ingreso a pokemonshome");
+//   try {
+//     var probanding = [];
+//     var probandingDB = [];
+//     let n = 1;
+//     Pokemon.findAll({
+//       include: [
+//         {
+//           model: Tipo,
+//           attributes: ["name"],
+//         },
+//       ],
+//     }).then((response) => {
+//       probandingDB = response.map((item) => {
+//         //    console.log(item.dataValues)
+//         return (obj = {
+//           id: item.dataValues.id,
+//           name:
+//             item.dataValues.name.charAt(0).toUpperCase() +
+//             item.dataValues.name.slice(1),
+//           image: item.dataValues.image,
+//           strength: item.dataValues.strength,
+//           // types: pokeDBS[i].types.map(e => e.name)
+//         });
+//       });
+//       // console.log(probandingDB)
+//       let arr = [];
+//       while (n < 2) {
+//         arr.push(axios.get(`https://pokeapi.co/api/v2/pokemon/${n}/`));
+//         n++;
+//       }
+//       Promise.all(arr).then((response) => {
+//         probanding = response.map((item) => {
+//           // console.log(response.data)
+//           return (obj = {
+//             id: item.data.id,
+//             name: item.data.name,
+//             life: item.data.stats[0].base_stat,
+//             force: item.data.stats[1].base_stat,
+//             defending: item.data.stats[2].base_stat,
+//             speed: item.data.stats[5].base_stat,
+//             height: item.data.height,
+//             weight: item.data.weight,
+//             img: item.data.sprites.other["official-artwork"].front_default,
+//           });
+//         });
+//         console.log(probanding);
+//         let allPokeHome = [...probandingDB, ...probanding];
+//         res.send(allPokeHome);
+//       });
+//     });
+//   } catch (error) {
+//     next(error);
+//   }
+// }); 
+/**********************/}
+
 module.exports = routerP;

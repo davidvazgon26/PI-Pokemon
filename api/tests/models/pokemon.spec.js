@@ -51,7 +51,7 @@ describe('Otras pruebas', ()=>{
                       speed: 2,
                       height: 22,
                       weight: 3,
-                      img: 10,
+                      img: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRq3fLvVtwOHO1R5UDHN8UupxrgtSx55qFmTWiBIT2WP2B6TP7p',
       })
         .then((res) => {
           // console.log(res)
