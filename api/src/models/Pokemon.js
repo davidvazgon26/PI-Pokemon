@@ -46,7 +46,7 @@ module.exports = (sequelize) => {
   },
   // { 
   //   timestamps: false, 
-  //   freezeTableName: true,
+  //   freezeTableName: true, detiene la pluralizacion
   // }
   );
 };

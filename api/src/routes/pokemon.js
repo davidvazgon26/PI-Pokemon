@@ -109,9 +109,9 @@ routerP.get ('/pokemons', async(req,res,next)=>{
 
 
 
-routerP.get('/pokemons/:id',  (req,res,next)=>{
+routerP.get('/pokemons/detalle',  (req,res,next)=>{
     try {
-        let {id} = req.params
+        let {id} = req.query
 
     if (id.length<4) {
         axios.get('https://pokeapi.co/api/v2/pokemon/'+id)
